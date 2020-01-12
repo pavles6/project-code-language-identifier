@@ -46,15 +46,5 @@
     ],
     "SASS": [
         ".scss"
-    ],
-    "JSON": [
-        ".json"
-    ],
-    "XML": [
-        ".iml",
-        ".xml"
-    ],
-    "YAML": [
-        ".yaml"
     ]
 }
