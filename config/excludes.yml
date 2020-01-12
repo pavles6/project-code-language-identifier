@@ -1,0 +1,5 @@
+# List of dependency folders which will be excluded
+# Feel free to update this list
+---
+- "node_modules"
+- "vendor"

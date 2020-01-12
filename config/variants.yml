@@ -1,0 +1,40 @@
+# List of file associations/variants
+# Feel free to update this list
+---
+Shell script:
+  - ".sh"
+Java:
+  - ".java"
+  - ".class"
+C/C++:
+  - ".cpp"
+  - ".h"
+  - ".cxx"
+  - ".c"
+  - ".m"
+C#:
+  - ".cs"
+  - ".csproj"
+PHP:
+  - ".php"
+  - ".php4"
+  - ".php5"
+  - ".phtml"
+Python:
+  - ".py"
+  - ".pyc"
+  - ".pyw"
+JavaScript:
+  - ".js"
+  - ".map.js"
+  - ".jsx"
+TypeScript:
+  - ".ts"
+  - ".tsx"
+HTML:
+  - ".html"
+CSS:
+  - ".css"
+  - ".css.map"
+SASS:
+  - ".scss"

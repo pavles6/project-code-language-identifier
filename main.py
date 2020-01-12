@@ -1,19 +1,26 @@
 import os
+import yaml
 import json
 
+configPath = os.path.dirname(os.path.realpath(__file__)) + '/config/'
 fileCount = 0
 extensions = []
 calculations = {}
 results = {}
+excludes = []
 variants = None
 
-with open(os.path.dirname(os.path.realpath(__file__)) + '/variants.json') as result:
-    variants = json.load(result)
+with open(configPath + 'excludes.yml') as result:
+    excludes = yaml.load(result, Loader=yaml.SafeLoader)
+
+with open(configPath + 'variants.yml') as result:
+    variants = yaml.load(result, Loader=yaml.SafeLoader)
 
 for variant in variants:
     calculations[variant] = 0
 
 for path, dirs, files in os.walk(os.getcwd()):
+    dirs[:] = [d for d in dirs if d not in excludes]
     for item in files:
         extensions.append(os.path.splitext(item)[1])
 
@@ -32,8 +39,8 @@ for key in list(calculations):
     if(calculations[key] == 0):
         del calculations[key]
 
-# registeredFiles - Total file count
-# calculations - Number of files
+# registeredFiles - Total count of scanned files
+# calculations - Number of files with specific code language
 # percentages - Percentage of specific language code scanned
 output = {
     "registeredFiles": fileCount,
