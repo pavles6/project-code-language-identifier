@@ -1,5 +1,5 @@
 # project-code-language-identifier
-A GitHub-like code identifier for your project
+A GitHub-like code language identifier/scanner
 
 
 ### Running a script
